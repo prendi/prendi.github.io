@@ -1,27 +1,28 @@
-.photo-container {
-	background: #729433;
-	height: 1024px;
+.header {
+	background: #9bc250;
+	width: 100%;
+	min-height: 700px;
 }
 
-.photo-container img {
-	height: 350px;
-	margin-left: auto;
-	margin-right: auto;
+.header .photo-container img {
 	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 20%;
+	height: 20%;
 }
 
-.intro-container {
-	background-color: #000000;
-}
-
-.intro-container h1{
-	font-size: 4em;
-	color: white;
+.header .intro-container h1{
+	font-size: 50px;
+	letter-spacing: 1px; 
+	color: #634a00;
 	text-align: center;
 }
 
-.mindmap {
-	margin-right: auto;
-	margin-left: auto;
-	position: absolute;
+.description-container .info h2{
+	text-align: center;
+}
+
+.description-container .education h2{
+	text-align: center;
 }
