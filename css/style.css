@@ -1,3 +1,7 @@
+h1, h2{
+	color: #634a00;
+}
+
 .header {
 	background: #9bc250;
 	width: 100%;
@@ -15,12 +19,18 @@
 .header .intro-container h1{
 	font-size: 50px;
 	letter-spacing: 1px; 
-	color: #634a00;
 	text-align: center;
 }
 
 .description-container .info h2{
 	text-align: center;
+	font-size: 30px;
+}
+
+.description-container .info div{
+	margin-top: 20px;
+	text-align: justify;
+	font-size: 18px;
 }
 
 .description-container .education h2{
