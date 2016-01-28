@@ -1,9 +1,11 @@
+/*colors from https://coolors.co/app/faf3dd-c8d5b9-8fc0a9-68b0ab-4a7c59*/
+
 h1, h2{
-	color: #634a00;
+	color: #FAF3DD;
 }
 
 .header {
-	background: #9bc250;
+	background: #4A7C59;
 	width: 100%;
 	min-height: 700px;
 }
@@ -22,17 +24,27 @@ h1, h2{
 	text-align: center;
 }
 
-.description-container .info h2{
-	text-align: center;
+.description-container {
+	display: block;
+	position: relative;
+	margin-top: -10px;
+	background: #C8D5B9;
+	min-height: 700px;
+}
+
+.description-container .info-position {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 70%;
+	margin-left: auto; 
+	margin-right: auto;
+	top: 50%;
 	font-size: 30px;
+	color: #634a00;
+	text-align: center;
 }
 
-.description-container .info div{
-	margin-top: 20px;
-	text-align: justify;
-	font-size: 18px;
-}
-
-.description-container .education h2{
+.centered {
 	text-align: center;
 }
