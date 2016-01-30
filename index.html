@@ -6,6 +6,7 @@
 <title>Gonçalo Prendi's Personal Webiste</title>
 <!--Links-->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
 <!--Metas-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,14 +27,18 @@
 			<img src="images/pcircle.png">
 		</div>
 		<div class="intro-container">
-			<h1>Well, hello there...</h1>
+			<h1>GONÇALO PRENDI</h1>
+			<h2>Software Engineer</h2>
 		</div>
 	</div>
 
 	<!--Description-->
 	<div class="description-container">
-			<div class="info-position">
+			<div class="info-container">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum nunc massa, a auctor eros scelerisque sit amet. Duis ac nisl dapibus, fringilla nisi et, placerat sem. Donec fermentum gravida placerat. Phasellus lobortis feugiat orci, ac blandit dui. Integer id neque nec nunc euismod viverra vel ut est. Donec eget rutrum felis.
+			</div>
+			<div class="social-container">
+				<i id="github-icon" class="fa fa-github fa-lg"></i>
 			</div>
 	</div>
 
@@ -50,6 +55,18 @@
 	<!--Skills -->
 	<div class="skills-container">
 	</div>
+
+	<script type="text/javascript">
+		$("#github-icon").mouseover(function (element) {
+			$("#github-icon").removeClass("fa-lg");
+			$("#github-icon").addClass("fa-2x");
+		});
+
+		$("#github-icon").mouseout(function (element) {
+			$("#github-icon").addClass("fa-lg");
+			$("#github-icon").removeClass("fa-2x");
+		});
+	</script>
 
 </body>
 </html>

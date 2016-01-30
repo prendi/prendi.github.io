@@ -7,7 +7,7 @@ h1, h2{
 .header {
 	background: #4A7C59;
 	width: 100%;
-	min-height: 700px;
+	height: 1080px;
 }
 
 .header .photo-container img {
@@ -24,25 +24,45 @@ h1, h2{
 	text-align: center;
 }
 
-.description-container {
-	display: block;
-	position: relative;
-	margin-top: -10px;
-	background: #C8D5B9;
-	min-height: 700px;
+.header .intro-container h2 {
+	font-size: 30px;
+	letter-spacing: 1px;
+	text-align: center;
 }
 
-.description-container .info-position {
-	position: absolute;
+.description-container {
+	display: block;
+	background: #C8D5B9;
+	height: 1024px;
+}
+
+.description-container .info-container {
+	position: relative;
 	left: 0;
 	right: 0;
+	top: 50%;
+	transform: translateY(-50%); 
 	width: 70%;
 	margin-left: auto; 
 	margin-right: auto;
-	top: 50%;
 	font-size: 30px;
 	color: #634a00;
 	text-align: center;
+}
+
+.description-container .social-container {
+	position: relative;
+	left: 0;
+	right: 0;
+	margin-left: auto; 
+	margin-right: auto;
+	font-size: 30px;
+	color: #634a00;
+	text-align: center;
+}
+.experience-container {
+	background-color: #8FC0A9;
+	height: 1024px;
 }
 
 .centered {
