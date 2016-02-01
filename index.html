@@ -39,6 +39,7 @@
 			</div>
 			<div class="social-container">
 				<i id="github-icon" class="fa fa-github fa-lg"></i>
+				<i id=""
 			</div>
 	</div>
 
@@ -57,14 +58,16 @@
 	</div>
 
 	<script type="text/javascript">
-		$("#github-icon").mouseover(function (element) {
-			$("#github-icon").removeClass("fa-lg");
-			$("#github-icon").addClass("fa-2x");
-		});
+		$('.social-container').children().each(function (index, element) {
+			$(element).on('mouseover', function (icon) {
+				$(this).removeClass('fa-lg');
+				$(this).addClass('fa-2x');
+			});
 
-		$("#github-icon").mouseout(function (element) {
-			$("#github-icon").addClass("fa-lg");
-			$("#github-icon").removeClass("fa-2x");
+			$(element).on('mouseout', function (icon) {
+				$(this).removeClass('fa-2x');
+				$(this).addClass('fa-lg');
+			});
 		});
 	</script>
 
