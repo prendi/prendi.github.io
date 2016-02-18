@@ -94,10 +94,44 @@ a {
 }
 
 .experience-container {
-	background-color: #8FC0A9;
+	background-color: #FFFFFF;
 	height: 1024px;
+	margin-top: 20px;
+}
+
+.experience {
+	margin-top: 25px;
+	width: 100%;
+	float: left;
+}
+
+.experience .company-icon {
+	margin-left: 50px;
+	width: 90px;
+	height: 90px;
+}
+
+.experience .company-text {
+
+	text-align: left;	
+}
+
+.experience-container .experience img {
+	/* Image 80x80 */
+	/* icon 70x70 */
 }
 
 .centered {
 	text-align: center;
+}
+
+.full-width {
+	display: block;
+	width: 100%;
+}
+
+.progress-bar {
+	width: 0%;
+	max-width: 75%;
+	height: 30px;
 }
