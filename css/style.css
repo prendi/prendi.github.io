@@ -152,9 +152,47 @@ a {
 }
 
 .progress-bar.java {
-	max-width: 75%
+	max-width: 100%
+}
+
+.progress-bar.sql {
+	max-width: 90%
+}
+
+.progress-bar.node {
+	max-width: 50%
+}
+
+.progress-bar.html {
+	max-width: 50%
+}
+
+.progress-bar.css {
+	max-width: 50%
+}
+
+.progress-bar.git {
+	max-width: 90%
+}
+
+.progress-bar.ml {
+	max-width: 50%
 }
 
 .progress-bar.javascript {
-	max-width: 30%
+	max-width: 75%
+}
+
+.progress-bar.python {
+	max-width: 0%
+}
+
+.progress-bar.scala {
+	max-width: 0%
+}
+
+.education-container {
+	background-color: #68B0AB;
+	height: 1024px;
+	margin-top: 20px;
 }

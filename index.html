@@ -21,7 +21,7 @@
 <!--Start body-->
 <body>
 
-	<!--Header section place photo and message-->
+	<!--Header section place photo and and current position-->
 	<div class="header">
 		<div class="photo-container">
 			<img src="images/pcircle.png">
@@ -34,9 +34,11 @@
 
 	<!--Description-->
 	<div class="description-container">
+		<!--short description about myself-->
 		<div class="info-container">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum nunc massa, a auctor eros scelerisque sit amet. Duis ac nisl dapibus, fringilla nisi et, placerat sem. Donec fermentum gravida placerat. Phasellus lobortis feugiat orci, ac blandit dui. Integer id neque nec nunc euismod viverra vel ut est. Donec eget rutrum felis.
 			<div class="social-container">
+				<!--social networks with icon-->
 				<ul class="list-unstyled">
 					<li>
 						<a href="https://github.com/prendi/">
@@ -56,8 +58,10 @@
 
 	<!--Experience -->
 	<div class="experience-container">
+		<!--Place company icon, position and dates on the left side-->
 		<div class="col-md-6 centered">
 			<span class="centered full-width">Professional</span>
+			<!--Feedzai experience-->
 			<div class="experience">
 				<div class="col-md-6 company-icon">
 					<img src="images/feedzai-icon2.png">
@@ -66,6 +70,7 @@
 					<span>Cras vestibulum nunc massa</span>
 				</div>
 			</div>
+			<!--Bica Studios experience-->
 			<div class="experience">
 				<div class="col-md-6 company-icon">
 					<img src="images/bica-icon.png">
@@ -74,6 +79,7 @@
 					<span>Cras vestibulum nunc massa</span>
 				</div>
 			</div>
+			<!--ISCTE experience-->
 			<div class="experience">
 				<div class="col-md-6 company-icon">
 					<img src="images/iscte-icon.png">
@@ -83,65 +89,85 @@
 				</div>
 			</div>
 		</div>
+		<!--Place major technical skills on the left-->
 		<div class="col-md-6">
-			<span class="centered full-width">Skills</span>
+			<span class="centered full-width sub-title">Technical Skills</span>
+			<!--Java-->
 			<div id="skill" class="skill col-md-6">
 				<div class="bar">
 					<span>Java</span>
 					<div id="progressbar" class="java progress-bar"></div>
 				</div>
 			</div>
+			<!--SQL-->
+			<div id="skill" class="skill col-md-6">
+				<div class="bar">
+					<span>SQL</span>
+					<div id="progressbar" class="sql progress-bar"></div>
+				</div>
+			</div>
+			<!--Javascript-->
 			<div id="skill" class="skill col-md-6">
 				<div class="bar">
 					<span>JavaScript</span>
 					<div id="progressbar" class="javascript progress-bar"></div>
 				</div>
 			</div>
+			<!--Node.js-->
 			<div id="skill" class="skill col-md-6">
 				<div class="bar">
-					<span>Java</span>
-					<div id="progressbar" class="java progress-bar"></div>
+					<span>Node.js</span>
+					<div id="progressbar" class="node progress-bar"></div>
+				</div>
+			</div>
+			<!--HTML-->
+			<div id="skill" class="skill col-md-6">
+				<div class="bar">
+					<span>HTML</span>
+					<div id="progressbar" class="html progress-bar"></div>
+				</div>
+			</div>
+			<!--CSS-->
+			<div id="skill" class="skill col-md-6">
+				<div class="bar">
+					<span>CSS</span>
+					<div id="progressbar" class="css progress-bar"></div>
+				</div>
+			</div>
+			<!--Git-->
+			<div id="skill" class="skill col-md-6">
+				<div class="bar">
+					<span>Git</span>
+					<div id="progressbar" class="git progress-bar"></div>
+				</div>
+			</div>
+			<!--Machine Learning-->
+			<div id="skill" class="skill col-md-6">
+				<div class="bar">
+					<span>Machine Learning</span>
+					<div id="progressbar" class="ml progress-bar"></div>
+				</div>
+			</div>
+			<span class="centered full-width">Next</span>
+			<!--To learn-->
+			<div id="skill" class="skill col-md-6">
+				<div class="bar">
+					<span>Scala</span>
+					<div id="progressbar" class="scala progress-bar"></div>
 				</div>
 			</div>
 			<div id="skill" class="skill col-md-6">
 				<div class="bar">
-					<span>Java</span>
-					<div id="progressbar" class="java progress-bar"></div>
-				</div>
-			</div>
-			<div id="skill" class="skill col-md-6">
-				<div class="bar">
-					<span>Java</span>
-					<div id="progressbar" class="java progress-bar"></div>
-				</div>
-			</div>
-			<div id="skill" class="skill col-md-6">
-				<div class="bar">
-					<span>Java</span>
-					<div id="progressbar" class="java progress-bar"></div>
-				</div>
-			</div>
-			<div id="skill" class="skill col-md-6">
-				<div class="bar">
-					<span>Java</span>
-					<div id="progressbar" class="java progress-bar"></div>
-				</div>
-			</div>
-			<div id="skill" class="skill col-md-6">
-				<div class="bar">
-					<span>Java</span>
-					<div id="progressbar" class="java progress-bar"></div>
+					<span>Python</span>
+					<div id="progressbar" class="python progress-bar"></div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<!--Education container -->
 	<div class="education-container">
 		
-	</div>
-
-	<!--Skills -->
-	<div class="skills-container">
 	</div>
 
 	<script type="text/javascript">
@@ -156,7 +182,7 @@
         				} else {
             				$(element).css('width', pCnt + '%');
         				}
-        			}, 3);
+        			}, 5);
 				});
 			}
 		});
