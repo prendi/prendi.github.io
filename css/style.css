@@ -206,7 +206,6 @@ a {
 }
 
 .node {
-  pointer-events: none;
   font: 10px sans-serif;
   color: #000000;
 }
