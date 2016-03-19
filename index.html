@@ -16,6 +16,7 @@
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<script src="js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
 	<script src="js/lib/jquery.viewportchecker.min.js" type="text/javascript"></script>
+	<script src="js/lib/d3.min.js" charset="utf-8"></script>
 	<!--End head-->
 </head>
 <!--Start body-->
@@ -60,7 +61,7 @@
 	<div class="experience-container">
 		<!--Place company icon, position and dates on the left side-->
 		<div class="col-md-6 centered">
-			<span class="centered full-width">Professional</span>
+			<h3 class="centered full-width">Experience</h3>
 			<!--Feedzai experience-->
 			<div class="experience">
 				<div class="col-md-6 company-icon">
@@ -91,7 +92,9 @@
 		</div>
 		<!--Place major technical skills on the left-->
 		<div class="col-md-6">
-			<span class="centered full-width sub-title">Technical Skills</span>
+			<h3 class="centered full-width">Technical Skills</h3>
+
+			<h4 class="left full-width sub-title padded">Languages</h4>
 			<!--Java-->
 			<div id="skill" class="skill col-md-6">
 				<div class="bar">
@@ -104,6 +107,13 @@
 				<div class="bar">
 					<span>SQL</span>
 					<div id="progressbar" class="sql progress-bar"></div>
+				</div>
+			</div>
+			<!--HTML-->
+			<div id="skill" class="skill col-md-6">
+				<div class="bar">
+					<span>HTML</span>
+					<div id="progressbar" class="html progress-bar"></div>
 				</div>
 			</div>
 			<!--Javascript-->
@@ -120,25 +130,11 @@
 					<div id="progressbar" class="node progress-bar"></div>
 				</div>
 			</div>
-			<!--HTML-->
-			<div id="skill" class="skill col-md-6">
-				<div class="bar">
-					<span>HTML</span>
-					<div id="progressbar" class="html progress-bar"></div>
-				</div>
-			</div>
 			<!--CSS-->
 			<div id="skill" class="skill col-md-6">
 				<div class="bar">
 					<span>CSS</span>
 					<div id="progressbar" class="css progress-bar"></div>
-				</div>
-			</div>
-			<!--Git-->
-			<div id="skill" class="skill col-md-6">
-				<div class="bar">
-					<span>Git</span>
-					<div id="progressbar" class="git progress-bar"></div>
 				</div>
 			</div>
 			<!--Machine Learning-->
@@ -148,12 +144,14 @@
 					<div id="progressbar" class="ml progress-bar"></div>
 				</div>
 			</div>
-			<span class="centered full-width">Next</span>
-			<!--To learn-->
+			<div>
+				<h3 class="centered full-width">Tools</h3>
+			</div>
+			<!--Git-->	
 			<div id="skill" class="skill col-md-6">
 				<div class="bar">
-					<span>Scala</span>
-					<div id="progressbar" class="scala progress-bar"></div>
+					<span>Git</span>
+					<div id="progressbar" class="git progress-bar"></div>
 				</div>
 			</div>
 			<div id="skill" class="skill col-md-6">
@@ -162,6 +160,7 @@
 					<div id="progressbar" class="python progress-bar"></div>
 				</div>
 			</div>
+
 		</div>
 	</div>
 
@@ -182,10 +181,85 @@
         				} else {
             				$(element).css('width', pCnt + '%');
         				}
-        			}, 5);
+        			}, 1);
 				});
 			}
 		});
+	</script>
+	<script>
+
+		var data = {
+  			"nodes":[
+  			  	{"name":"Me","group":"red"},
+  			  	{"name":"Books","group":1},
+  			  	{"name":"Movies","group":1},
+  			  	{"name":"Music","group":1},
+  			  	{"name":"Cook","group":1},
+  			  	{"name":"Music","group":1},
+  			  	{"name":"Stuff","group":3}
+  			],
+  			"links":[
+  			  	{"source":0,"target":3,"value":1},
+  			  	{"source":2,"target":3,"value":8},
+  			  	{"source":3,"target":1,"value":10},
+  			  	{"source":1,"target":2,"value":10},
+			  	{"source":5,"target":4,"value":10},
+				{"source":6,"target":5,"value":10},
+				{"source":4,"target":3,"value":10}
+  			]
+		};
+		var color = d3.scale.category10();
+		
+		var width = 960,
+		    height = 500;
+
+		var svg = d3.select("body").append("svg")
+		    .attr("width", width)
+		    .attr("height", height);
+
+		var force = d3.layout.force()
+		    .gravity(0.05)
+		    .distance(200)
+		    .charge(-300)
+		    .size([width, height]);
+
+  		force
+  		    .nodes(data.nodes)
+  		    .links(data.links)
+  		    .start();
+
+  		var link = svg.selectAll(".link")
+  		    .data(data.links)
+  		  	.enter()
+  		  	.append("line")
+  		    .attr("class", "link")
+			.style("stroke-width", function(d) { return Math.sqrt(d.value); });
+
+  		var node = svg.selectAll(".node")
+  		    .data(data.nodes)
+  		  	.enter()
+  		  	.append("g")
+  		    .attr("class", "node")
+  		    .call(force.drag);
+
+      	node.append("circle")
+      	.attr("class", "node")
+      	.attr("r", 30)
+      	.style("fill", function(d) { return color(3); })
+
+  		node.append("text")
+  		  .attr("dx", 12)
+  		  .attr("dy", ".35em")
+  		  .text(function(d) { return d.name; });
+
+  		force.on("tick", function() {
+  		  link.attr("x1", function(d) { return d.source.x; })
+  		      .attr("y1", function(d) { return d.source.y; })
+  		      .attr("x2", function(d) { return d.target.x; })
+  		      .attr("y2", function(d) { return d.target.y; });
+
+        	node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+   		});
 	</script>
 </body>
 </html>
