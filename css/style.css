@@ -125,6 +125,14 @@ a {
 	text-align: center;
 }
 
+.left {
+	text-align: left;
+}
+
+.padded {
+	padding-left: 15px;
+}
+
 .full-width {
 	display: block;
 	width: 100%;
@@ -135,8 +143,8 @@ a {
 }
 
 .bar {
-	border: 2px solid #000000;
-	height: 30px;
+	border: 1px solid #000000;
+	height: 20px;
 }
 
 .bar span {
@@ -164,7 +172,7 @@ a {
 }
 
 .progress-bar.html {
-	max-width: 50%
+	max-width: 80%
 }
 
 .progress-bar.css {
@@ -176,11 +184,11 @@ a {
 }
 
 .progress-bar.ml {
-	max-width: 50%
+	max-width: 40%
 }
 
 .progress-bar.javascript {
-	max-width: 75%
+	max-width: 70%
 }
 
 .progress-bar.python {
@@ -195,4 +203,15 @@ a {
 	background-color: #68B0AB;
 	height: 1024px;
 	margin-top: 20px;
+}
+
+.node {
+  pointer-events: none;
+  font: 10px sans-serif;
+  color: #000000;
+}
+
+.link {
+	stroke: #999;
+  	stroke-opacity: .6;
 }
