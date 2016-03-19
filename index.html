@@ -210,7 +210,7 @@
 		};
 		var color = d3.scale.category10();
 		
-		var width = 960,
+		var width = $(window).width(),
 		    height = 500;
 
 		var svg = d3.select("body").append("svg")
@@ -220,7 +220,7 @@
 		var force = d3.layout.force()
 		    .gravity(0.05)
 		    .distance(200)
-		    .charge(-300)
+		    .charge(-500)
 		    .size([width, height]);
 
   		force
@@ -249,7 +249,7 @@
 
   		node.append("text")
   		  .attr("dx", 12)
-  		  .attr("dy", ".35em")
+  		  .attr("dy", 40)
   		  .text(function(d) { return d.name; });
 
   		force.on("tick", function() {
