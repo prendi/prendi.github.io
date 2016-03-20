@@ -56,7 +56,9 @@
 			</div>
 		</div>
 	</div>
-
+	<div class="separator">
+		<h1>Experience</h1>
+	</div>
 	<!--Experience -->
 	<div class="experience-container">
 		<!--Place company icon, position and dates on the left side-->
@@ -154,19 +156,58 @@
 					<div id="progressbar" class="git progress-bar"></div>
 				</div>
 			</div>
-			<div id="skill" class="skill col-md-6">
-				<div class="bar">
-					<span>Python</span>
-					<div id="progressbar" class="python progress-bar"></div>
-				</div>
-			</div>
-
 		</div>
 	</div>
-
+	<div class="separator">
+		<h1>Education</h1>
+	</div>
 	<!--Education container -->
 	<div class="education-container">
-		
+		<div class="course">
+			<ul>
+				<li>
+					<i class="fa fa-graduation-cap fa-4x"></i>
+				</li>
+				<li>
+					<div>
+						<p>Master's Degree in Computer Science</p>
+						<p>ISCTE-IUL</p>
+						<p>2013-2015</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="course">
+			<ul>
+				<li>
+					<i class="fa fa-graduation-cap fa-4x"></i>
+				</li>
+				<li>
+					<div>
+						<p>Bachelor's Degree in Computer Science</p>
+						<p>ISCTE-IUL</p>
+						<p>2010-2013</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="course">
+			<ul>
+				<li>
+					<i class="fa fa-graduation-cap fa-4x"></i>
+				</li>
+				<li>
+					<div>
+						<p>Professional Course in Computer Science and Business</p>
+						<p>Gama Barros High School</p>
+						<p>2008-2010</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="separator">
+		<h1>Interests</h1>
 	</div>
 
 	<script type="text/javascript">
@@ -184,6 +225,13 @@
         			}, 1);
 				});
 			}
+		});
+		$('.separator').each(function () {
+			$(this).viewportChecker({
+				callbackFunction: function (element) {
+					$(element).find('h1').fadeIn(2000);	
+				}
+			});
 		});
 	</script>
 	<script>
@@ -243,20 +291,20 @@
   		    .call(force.drag);
 
       	node.append("circle")
-      	.attr("class", "node")
-      	.attr("r", 30)
-      	.style("fill", function(d) { return color(3); })
+      		.attr("class", "node")
+      		.attr("r", 30)
+      		.style("fill", function(d) { return color(3); })
 
   		node.append("text")
-  		  .attr("dx", 12)
-  		  .attr("dy", 40)
-  		  .text(function(d) { return d.name; });
+  		  	.attr("dx", 12)
+  		  	.attr("dy", 40)
+  		  	.text(function(d) { return d.name; });
 
   		force.on("tick", function() {
-  		  link.attr("x1", function(d) { return d.source.x; })
-  		      .attr("y1", function(d) { return d.source.y; })
-  		      .attr("x2", function(d) { return d.target.x; })
-  		      .attr("y2", function(d) { return d.target.y; });
+  		  	link.attr("x1", function(d) { return d.source.x; })
+  		      	.attr("y1", function(d) { return d.source.y; })
+  		      	.attr("x2", function(d) { return d.target.x; })
+  		      	.attr("y2", function(d) { return d.target.y; });
 
         	node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
    		});

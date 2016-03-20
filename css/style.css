@@ -93,8 +93,24 @@ a {
 	font-size: 45px;
 }
 
+.separator {
+	display: block;
+	background-color: #68B0AB;
+	height: 1080px;
+	margin-top: -20px;
+}
+
+
+.separator h1 {
+	display: none;
+	position: relative;	
+	font-size: 70px;
+	text-align: center;
+	top: 50%;
+}
+
 .experience-container {
-	background-color: #FFFFFF;
+	background-color: white;
 	height: 1024px;
 	margin-top: 20px;
 }
@@ -191,18 +207,37 @@ a {
 	max-width: 70%
 }
 
-.progress-bar.python {
-	max-width: 0%
-}
-
-.progress-bar.scala {
-	max-width: 0%
-}
-
 .education-container {
-	background-color: #68B0AB;
+	background-color: white;
 	height: 1024px;
 	margin-top: 20px;
+}
+
+.education-container .course {
+	position: relative;
+	left: 0;
+	right: 0;
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;
+}
+
+.education-container .course ul {
+	padding-left: 60px;
+}
+
+.education-container .course ul li {
+	display: inline-block;
+}
+
+.education-container .course ul li div {
+	display: block;
+	position: absolute;
+	width: 300px;
+	line-height: 20px;
+	margin-top: -60px;
+	margin-left: 50px;
 }
 
 .node {
