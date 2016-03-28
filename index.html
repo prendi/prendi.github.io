@@ -14,9 +14,10 @@
 	<meta name="keywords" content="cv, personal website, gonçalo prendi" />
 	<!--Scripts-->
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<script src="js/lib/jquery-1.11.1.min.js" type="text/javascript"></script>
-	<script src="js/lib/jquery.viewportchecker.min.js" type="text/javascript"></script>
-	<script src="js/lib/d3.min.js" charset="utf-8"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+	<script src="bower_components/vissense/dist/vissense.min.js" type="text/javascript"></script>
+	<script src="bower_components/d3/d3.min.js" type="text/javascript"></script>
+	<script src="bower_components/progressbar.js/dist/progressbar.min.js" type="text/javascript"></script>
 	<!--End head-->
 </head>
 <!--Start body-->
@@ -211,7 +212,7 @@
 	</div>
 
 	<script type="text/javascript">
-		$('.experience').viewportChecker({
+		$('.experience').visible({
 			callbackFunction : function (elem, action) {
 				$('.progress-bar').each( function (index, element) {
 					var pGress = setInterval(function() {
@@ -222,7 +223,7 @@
         				} else {
             				$(element).css('width', pCnt + '%');
         				}
-        			}, 1);
+        			}, 10);
 				});
 			}
 		});
