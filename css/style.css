@@ -19,8 +19,8 @@ a {
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
-	width: 20%;
-	height: 20%;
+	width: 250px;
+	height: 350px;
 }
 
 .header .intro-container h1{
@@ -93,11 +93,17 @@ a {
 	font-size: 45px;
 }
 
+.container {
+	background-color: white;
+	height: 500px;
+	margin-top: 20px;
+}
+
 .separator {
 	display: block;
 	background-color: #68B0AB;
 	width: 100%;
-	height: 1080px;
+	height: 800px;
 	margin-top: -20px;
 }
 
@@ -106,16 +112,12 @@ a {
 	display: block;
 	opacity: 0;
 	width: 30%;
-	position: relative;	
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
 	font-size: 70px;
 	text-align: center;
 	top: 50%;
-}
-
-.experience-container {
-	background-color: white;
-	height: 1024px;
-	margin-top: 20px;
 }
 
 .experience {
@@ -135,7 +137,7 @@ a {
 	text-align: left;	
 }
 
-.experience-container .experience img {
+.skills.container .experience img {
 	/* Image 80x80 */
 	/* icon 70x70 */
 }
@@ -210,31 +212,25 @@ a {
 	max-width: 70%
 }
 
-.education-container {
-	background-color: white;
-	height: 1024px;
-	margin-top: 20px;
-}
-
-.education-container .course {
+.education.container .course {
 	position: relative;
 	left: 0;
 	right: 0;
 	width: 500px;
 	margin-right: auto;
 	margin-left: auto;
-	margin-top: 100px;
+	margin-top: 60px;
 }
 
-.education-container .course ul {
+.education.container .course ul {
 	padding-left: 60px;
 }
 
-.education-container .course ul li {
+.education.container .course ul li {
 	display: inline-block;
 }
 
-.education-container .course ul li div {
+.education.container .course ul li div {
 	display: block;
 	position: absolute;
 	width: 300px;
@@ -252,3 +248,9 @@ a {
 	stroke: #999;
   	stroke-opacity: .6;
 }
+
+.contacts.container h1 {
+	color: black;
+	text-align: center;
+}
+

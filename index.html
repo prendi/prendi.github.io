@@ -5,8 +5,8 @@
 	<!--Title-->
 	<title>Gonçalo Prendi's Personal Webiste</title>
 	<!--Links-->
-	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
-	<link href="css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+	<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+	<link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
 	<!--Metas-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -61,7 +61,7 @@
 		<h1>Experience</h1>
 	</div>
 	<!--Experience -->
-	<div class="experience-container">
+	<div class="skills container">
 		<!--Place company icon, position and dates on the left side-->
 		<div class="col-md-6 centered">
 			<h3 class="centered full-width">Experience</h3>
@@ -163,7 +163,7 @@
 		<h1>Education</h1>
 	</div>
 	<!--Education container -->
-	<div class="education-container">
+	<div class="education container">
 		<div class="course">
 			<ul>
 				<li>
@@ -210,10 +210,35 @@
 	<div class="separator">
 		<h1>Interests</h1>
 	</div>
+	
+	<div class="interests container">
+	</div>
+
+	<div class="separator">
+		<h1>Contacts</h1>
+	</div>
+
+	<div class="contacts container">
+	</div>
 
 	<script type="text/javascript">
 
-		var experienceMonitor = VisSense($('.experience')[0]).monitor;
+		var experienceMonitor = $('.bar').each(function (index, element) {
+			VisSense(element).monitor({
+				fullyvisible: function (monitor) {
+					var pGress = setInterval(function() {
+						var bar = $(element).find('.progress-bar');
+        				var pVal = bar.width();
+        				var pCnt = !isNaN(pVal) ? (pVal + 1) : 1;
+        				if (pCnt > 100) {
+            				clearInterval(pGress);
+        				} else {
+            				bar.css('width', pCnt + '%');
+        				}
+        			}, 10);
+				}
+			}).start();	
+		})
 		var separatorMonitor = $('.separator h1').each(function (index, element) {
 			VisSense(element).monitor({
 				fullyvisible: function (monitor) {
@@ -272,7 +297,7 @@
 		var width = $(window).width(),
 		    height = 500;
 
-		var svg = d3.select("body").append("svg")
+		var svg = d3.select(".interests.container").append("svg")
 		    .attr("width", width)
 		    .attr("height", height);
 
