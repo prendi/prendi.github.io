@@ -212,6 +212,16 @@
 	</div>
 
 	<script type="text/javascript">
+
+		var experienceMonitor = VisSense($('.experience')[0]).monitor;
+		var separatorMonitor = $('.separator h1').each(function (index, element) {
+			VisSense(element).monitor({
+				fullyvisible: function (monitor) {
+					$(element).fadeTo(2000, 100);
+				}
+			}).start();
+		});
+		/*
 		$('.experience').visible({
 			callbackFunction : function (elem, action) {
 				$('.progress-bar').each( function (index, element) {
@@ -226,14 +236,14 @@
         			}, 10);
 				});
 			}
-		});
-		$('.separator').each(function () {
+		});*/
+		/*$('.separator').each(function () {
 			$(this).viewportChecker({
 				callbackFunction: function (element) {
 					$(element).find('h1').fadeIn(2000);	
 				}
 			});
-		});
+		});*/
 	</script>
 	<script>
 
