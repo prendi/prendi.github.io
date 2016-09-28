@@ -61,7 +61,7 @@
 		<h1>Experience</h1>
 	</div>
 	<!--Experience -->
-	<div class='skills container'>
+	<div class='experience container'>
 		<!--Place company icon, position and dates on the left side-->
 			<!--Feedzai experience-->
 			<div class='icon-description-container'>
@@ -119,63 +119,8 @@
 		<div class='separator'>
 			<h1>Skills</h1>
 		</div>
-		<!--<div class='col-md-6'>
-			<h3 class='centered full-width'>Technical Skills</h3>
-
-			<h4 class='left full-width sub-title padded'>Languages</h4>
-			<div id='skill' class='skill col-md-6'>
-				<div class='bar'>
-					<span>Java</span>
-					<div id='progressbar' class='java progress-bar'></div>
-				</div>
-			</div>
-			<div id='skill' class='skill col-md-6'>
-				<div class='bar'>
-					<span>SQL</span>
-					<div id='progressbar' class='sql progress-bar'></div>
-				</div>
-			</div>
-			<div id='skill' class='skill col-md-6'>
-				<div class='bar'>
-					<span>HTML</span>
-					<div id='progressbar' class='html progress-bar'></div>
-				</div>
-			</div>
-			<div id='skill' class='skill col-md-6'>
-				<div class='bar'>
-					<span>JavaScript</span>
-					<div id='progressbar' class='javascript progress-bar'></div>
-				</div>
-			</div>
-			<div id='skill' class='skill col-md-6'>
-				<div class='bar'>
-					<span>Node.js</span>
-					<div id='progressbar' class='node progress-bar'></div>
-				</div>
-			</div>
-			<div id='skill' class='skill col-md-6'>
-				<div class='bar'>
-					<span>CSS</span>
-					<div id='progressbar' class='css progress-bar'></div>
-				</div>
-			</div>
-			<div id='skill' class='skill col-md-6'>
-				<div class='bar'>
-					<span>Machine Learning</span>
-					<div id='progressbar' class='ml progress-bar'></div>
-				</div>
-			</div>
-			<div>
-				<h3 class='centered full-width'>Tools</h3>
-			</div>
-			<div id='skill' class='skill col-md-6'>
-				<div class='bar'>
-					<span>Git</span>
-					<div id='progressbar' class='git progress-bar'></div>
-				</div>
-			</div>
+		<div class='skills container'>
 		</div>
-	</div>-->
 	<div class='separator'>
 		<h1>Education</h1>
 	</div>
@@ -231,13 +176,6 @@
 		</div>
 	</div>
 	<div class='separator'>
-		<h1>Interests</h1>
-	</div>
-	
-	<div class='interests container'>
-	</div>
-
-	<div class='separator'>
 		<h1>Contacts</h1>
 	</div>
 
@@ -274,50 +212,42 @@
 
 		var data = {
   			'nodes':[
-  			  	{'name': 'Me'          ,'color': '#68B0AB'},
-  			  	{'name': 'Personal'    ,'color': 'green'},
-  			  	{'name': 'Professional','color': 'orange'},
-  			  	{'name': 'Music'       ,'color': 'orange'},
-  			  	{'name': 'Cook'        ,'color': 'orange'},
-  			  	{'name': 'Music'       ,'color': 'orange'},
-  			  	{'name': 'Stuff'       ,'color': 'orange'}
-  			],
-  			'links':[
-  			  	{'source': 0, 'target': 3, 'value':1},
-  			  	{'source': 2, 'target': 3, 'value':8},
-  			  	{'source': 3, 'target': 1, 'value':10},
-  			  	{'source': 1, 'target': 2, 'value':10},
-			  	{'source': 5, 'target': 4, 'value':10},
-				{'source': 6, 'target': 5, 'value':10},
-				{'source': 4, 'target': 3, 'value':10}
+  			  	{'name': 'Java'             ,'color': 'orange', 'value': 30},
+  			  	{'name': 'Scala'            ,'color': 'orange', 'value': 30},
+  			  	{'name': 'Javascript'       ,'color': 'orange', 'value': 30},
+  			  	{'name': 'CSS'              ,'color': 'orange', 'value': 30},
+  			  	{'name': 'HTML'             ,'color': 'orange', 'value': 30},
+  			  	{'name': 'SQL'              ,'color': 'orange', 'value': 30},
+  			  	{'name': 'PostgreSQL'       ,'color': 'orange', 'value': 30},
+  			  	{'name': 'Amazon Redshift'  ,'color': 'orange', 'value': 30},
+  			  	{'name': 'Git'              ,'color': 'orange', 'value': 30},
+  			  	{'name': 'Machine Learning' ,'color': 'orange', 'value': 30},
+  			  	{'name': 'Shellscript'      ,'color': 'orange', 'value': 30},
+  			  	{'name': 'Docker'           ,'color': 'orange', 'value': 30},
+  			  	{'name': 'Cassandra'        ,'color': 'orange', 'value': 30},
+  			  	{'name': 'C'                ,'color': 'orange', 'value': 30},
+  			  	{'name': 'C++'              ,'color': 'orange', 'value': 30},
+  			  	{'name': 'Node.js'          ,'color': 'orange', 'value': 30}
   			]
 		};
 		var color = d3.scale.category10();
 		
-		var width = $(window).width(),
-		    height = 500;
+		var width = $(window).width() - 100,
+		    height = 400;
 
-		var svg = d3.select('.interests.container').append('svg')
+		var svg = d3.select('.skills.container').append('svg')
 		    .attr('width', width)
 		    .attr('height', height);
 
 		var force = d3.layout.force()
-		    .gravity(0.05)
+		    .gravity(0.1)
 		    .distance(200)
 		    .charge(-500)
 		    .size([width, height]);
 
   		force
   		    .nodes(data.nodes)
-  		    .links(data.links)
   		    .start();
-
-  		var link = svg.selectAll('.link')
-  		    .data(data.links)
-  		  	.enter()
-  		  	.append('line')
-  		    .attr('class', 'link')
-			.style('stroke-width', function(d) { return Math.sqrt(d.value); });
 
   		var node = svg.selectAll('.node')
   		    .data(data.nodes)
@@ -328,8 +258,8 @@
 
       	node.append('circle')
       		.attr('class', 'node')
-      		.attr('r', 30)
-      		.style('fill', function(d) { return d.color; })
+      		.attr('r', function(d) { return parseInt(d.value); })
+      		.style('fill', function(d) { return d.color; });
 
   		node.append('text')
   		  	.attr('dx', 12)
@@ -337,13 +267,26 @@
   		  	.text(function(d) { return d.name; });
 
   		force.on('tick', function() {
-  		  	link.attr('x1', function(d) { return d.source.x; })
-  		      	.attr('y1', function(d) { return d.source.y; })
-  		      	.attr('x2', function(d) { return d.target.x; })
-  		      	.attr('y2', function(d) { return d.target.y; });
-
-        	node.attr('transform', function(d) { return 'translate(' + d.x + ',' + d.y + ')'; });
+        	node.attr('transform', function(d) { 
+				if (d.px + 40 > width) {
+		            d.px = width - 40;
+		            d.x = width -40;
+		        } else if (d.px - 40 < 0) {
+		            d.px = 40;
+		            d.x = 40;
+		        }
+		
+		        if (d.py + 40 > height) {
+		            d.py = height - 40;
+		            d.y = height -40;
+		        } else if (d.py - 40 < 0) {
+		            d.py = 40;
+		            d.y = 40;
+		        }
+        		return 'translate(' + d.x + ',' + d.y + ')'; 
+        	});
    		});
+
 	</script>
 </body>
 </html>
