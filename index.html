@@ -60,233 +60,234 @@
 	<div class='separator'>
 		<h1>Experience</h1>
 	</div>
-	<!--Experience -->
 	<div class='experience container'>
-		<!--Place company icon, position and dates on the left side-->
-			<!--Feedzai experience-->
-			<div class='icon-description-container'>
-				<ul>
-					<li>
-						<div class='icon'>
+		<ul class="timeline">
+			<li>
+				<div class="timeline-badge"><i class="fa fa-briefcase"></i></div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<div>
 							<img src='images/feedzai-icon2.png'>
+							<h4 class="timeline-title">Feedzai</h4>
 						</div>
-					</li>
-					<li>
-						<div class='text'>
-							<p>Software Engineer</p>
-							<p>Feedzai</p>
-							<p>Sep / 2015 - Present</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<!--Bica Studios experience-->
-			<div class='icon-description-container'>
-				<ul>
-					<li>
-						<div class='icon'>
-							<img src='images/bica-icon.png'>
-						</div>
-					</li>
-					<li>
-						<div class='text'>
-							<p>Summer Intern</p>
-							<p>Bica Studios</p>
-							<p>Jun / 2015 - Sep / 2015</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<!--ISCTE-IUL experience-->
-			<div class='icon-description-container'>
-				<ul>
-					<li>
-						<div class='icon'>
-							<img src='images/iscte-icon.png'>
-						</div>
-					</li>
-					<li>
-						<div class='text'>
-							<p>ISCTE-IUL</p>
-							<p>Teaching Assistant</p>
-							<p>Sep / 2014 - Jan / 2015</p>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class='separator'>
-			<h1>Skills</h1>
-		</div>
-		<div class='skills container'>
-		</div>
-	<div class='separator'>
-		<h1>Education</h1>
-	</div>
-	<!--Education container -->
-	<div class='education container'>
-		<div class='icon-description-container'>
-			<ul>
-				<li>
-					<div class='icon'>
-						<i class='fa fa-graduation-cap fa-4x'></i>
 					</div>
-				</li>
-				<li>
-					<div class='text'>
-						<p>Master's Degree in Computer Science</p>
-						<p>ISCTE-IUL</p>
-						<p>2013-2015</p>
+					<div class="timeline-body">
+						<p>Software Engineer</p><p>2015-Present</p>
 					</div>
-				</li>
-			</ul>
-		</div>
-		<div class='icon-description-container'>
-			<ul>
-				<li>
-					<div class='icon'>
-						<i class='fa fa-graduation-cap fa-4x'></i>
+				</div>
+			</li>
+			<li class="timeline-inverted">
+				<div class="timeline-badge"><i class="fa fa-briefcase"></i></div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<img src='images/bica-icon.png'>
+						<h4 class="timeline-title">Bica Studios</h4>
 					</div>
-				</li>
-				<li>
-					<div class='text'>
-						<p>Bachelor's Degree in Computer Science</p>
-						<p>ISCTE-IUL</p>
-						<p>2010-2013</p>
+					<div class="timeline-body">
+						<p>Summer Intern</p><p>2015</p>
 					</div>
-				</li>
-			</ul>
-		</div>
-		<div class='icon-description-container'>
-			<ul>
-				<li>
-					<div class='icon'>
-						<i class='fa fa-graduation-cap fa-4x'></i>
+				</div>
+			</li>
+			<li>
+				<div class="timeline-badge"><i class="fa fa-briefcase"></i></div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<img src='images/iscte-icon.png'>
+						<h4 class="timeline-title">ISCTE-IUL</h4>
 					</div>
-				</li>
-				<li>
-					<div class='text'>
-						<p>Professional Course in Computer Science and Business</p>
-						<p>Gama Barros High School</p>
-						<p>2008-2010</p>
+					<div class="timeline-body">
+						<p>Teaching Assistant</p><p>2014-2015</p>
 					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='separator'>
-		<h1>Contacts</h1>
+				</div>
+			</li>
+			<li class="timeline-inverted">
+				<div class="timeline-badge"><i class='fa fa-graduation-cap'></i></div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<img src='images/iscte-icon.png'>
+						<h4 class="timeline-title">ISCTE-IUL</h4>
+					</div>
+					<div class="timeline-body">
+						<p>Master's Degree in Computer Science</p><p>2014-2015</p>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="timeline-badge"><i class='fa fa-graduation-cap'></i></div>
+				<div class="timeline-panel">
+					<div class="timeline-heading">
+						<img src='images/iscte-icon.png'>
+						<h4 class="timeline-title">ISCTE-IUL</h4>
+					</div>
+					<div class="timeline-body">
+						<p>Bachelor's Degree in Computer Science</p><p>2014-2015</p>
+					</div>
+				</div>
+			</li>
+		</ul>
 	</div>
 
-	<div class='contacts container'>
-	</div>
+<div class='separator'>
+	<h1>Skills</h1>
+</div>
+<div class='skills container'>
+</div>
+<div class='separator'>
+	<h1>Contacts</h1>
+</div>
 
-	<script type='text/javascript'>
+<div class='contacts container'>
+</div>
 
-		var experienceMonitor = $('.bar').each(function (index, element) {
-			VisSense(element).monitor({
-				fullyvisible: function (monitor) {
-					var pGress = setInterval(function() {
-						var bar = $(element).find('.progress-bar');
-        				var pVal = bar.width();
-        				var pCnt = !isNaN(pVal) ? (pVal + 1) : 1;
-        				if (pCnt > 100) {
-            				clearInterval(pGress);
-        				} else {
-            				bar.css('width', pCnt + '%');
-        				}
-        			}, 10);
-				}
-			}).start();	
-		})
-		var separatorMonitor = $('.separator h1').each(function (index, element) {
-			VisSense(element).monitor({
-				fullyvisible: function (monitor) {
-					$(element).fadeTo(2000, 100);
-				}
-			}).start();
+<script type='text/javascript'>
+
+	var experienceMonitor = $('.bar').each(function (index, element) {
+		VisSense(element).monitor({
+			fullyvisible: function (monitor) {
+				var pGress = setInterval(function() {
+					var bar = $(element).find('.progress-bar');
+					var pVal = bar.width();
+					var pCnt = !isNaN(pVal) ? (pVal + 1) : 1;
+					if (pCnt > 100) {
+						clearInterval(pGress);
+					} else {
+						bar.css('width', pCnt + '%');
+					}
+				}, 10);
+			}
+		}).start();	
+	})
+	var separatorMonitor = $('.separator h1').each(function (index, element) {
+		VisSense(element).monitor({
+			fullyvisible: function (monitor) {
+				$(element).fadeTo(2000, 100);
+			}
+		}).start();
+	});
+</script>
+<script>
+
+	var data = {
+		'nodes':[
+			{'name': 'Java'            ,'color': 'green', 'value': 30},
+			{'name': 'SQL'             ,'color': 'green', 'value': 30},
+			{'name': 'Javascript'      ,'color': 'green', 'value': 30},
+			{'name': 'CSS'             ,'color': 'green', 'value': 20},
+			{'name': 'HTML'            ,'color': 'green', 'value': 20},
+			{'name': 'C#'              ,'color': 'green', 'value': 10},
+			{'name': 'Scala'           ,'color': 'green', 'value': 10},
+			{'name': 'Shellscript'     ,'color': 'green', 'value': 10},
+			{'name': 'Node.js'         ,'color': 'green', 'value': 10},
+			{'name': 'C/C++'           ,'color': 'green', 'value': 10},
+		
+			{'name': 'PostgreSQL'      ,'color': 'darkcyan', 'value': 30},
+			{'name': 'Cassandra'       ,'color': 'darkcyan', 'value': 10},
+			{'name': 'Amazon Redshift' ,'color': 'darkcyan', 'value': 10},
+
+			{'name': 'Git'             ,'color': 'grey', 'value': 30},
+			{'name': 'IntelliJ'        ,'color': 'grey', 'value': 20},
+			{'name': 'Linux'           ,'color': 'grey', 'value': 20},
+			{'name': 'Eclipse'         ,'color': 'grey', 'value': 10},
+			{'name': 'Docker'          ,'color': 'grey', 'value': 10},
+		]
+	};
+	var color = d3.scale.category10();
+
+	var width = $(window).width() - 100,
+	height = 400;
+
+	var svg = d3.select('.skills.container').append('svg')
+	.attr('width', width)
+	.attr('height', height);
+
+	var force = d3.layout.force()
+	.gravity(0.1)
+	.distance(200)
+	.charge(-500)
+	.size([width, height]);
+
+	force
+	.nodes(data.nodes)
+	.start();
+
+	var node = svg.selectAll('.node')
+	.data(data.nodes)
+	.enter()
+	.append('g')
+	.attr('class', 'node')
+	.call(force.drag);
+
+	node.append('circle')
+	.attr('class', 'node')
+	.attr('r', function(d) { return parseInt(d.value); })
+	.style('fill', function(d) { return d.color; });
+
+	node.append('text')
+	.attr('dx', function(d) { return parseInt(d.value * 0.5); })
+	.attr('dy', function(d) { return parseInt(d.value + 10); })
+	.text(function(d) { return d.name; });
+
+	var legend = svg.append("g")
+	  .attr("class", "legend")
+	  .attr("x", width - 65)
+	  .attr("y", 25)
+	  .attr("height", 200)
+	  .attr("width", 200);
+
+	legend.append("rect")
+	  .attr("x", width - 100)
+	  .attr("y", 17)
+	  .attr("width", 10)
+	  .attr("height", 10)
+	  .style("fill", "green");
+	legend.append("text")
+	  .attr("x", width - 80)
+	  .attr("y", 25)
+	  .text("Languages");
+
+	legend.append("rect")
+	  .attr("x", width - 100)
+	  .attr("y", 42)
+	  .attr("width", 10)
+	  .attr("height", 10)
+	  .style("fill", "darkcyan");
+	legend.append("text")
+	  .attr("x", width - 80)
+	  .attr("y", 50)
+	  .text("Databases");
+
+  	legend.append("rect")
+	  .attr("x", width - 100)
+	  .attr("y", 67)
+	  .attr("width", 10)
+	  .attr("height", 10)
+	  .style("fill", "grey");
+	legend.append("text")
+	  .attr("x", width - 80)
+	  .attr("y", 75)
+	  .text("Others");
+
+	force.on('tick', function() {
+		node.attr('transform', function(d) { 
+			if (d.px + 40 > width) {
+				d.px = width - 40;
+				d.x = width -40;
+			} else if (d.px - 40 < 0) {
+				d.px = 40;
+				d.x = 40;
+			}
+
+			if (d.py + 40 > height) {
+				d.py = height - 40;
+				d.y = height -40;
+			} else if (d.py - 40 < 0) {
+				d.py = 40;
+				d.y = 40;
+			}
+			return 'translate(' + d.x + ',' + d.y + ')'; 
 		});
-	</script>
-	<script>
+	});
 
-		var data = {
-  			'nodes':[
-  			  	{'name': 'Java'             ,'color': 'orange', 'value': 30},
-  			  	{'name': 'Scala'            ,'color': 'orange', 'value': 30},
-  			  	{'name': 'Javascript'       ,'color': 'orange', 'value': 30},
-  			  	{'name': 'CSS'              ,'color': 'orange', 'value': 30},
-  			  	{'name': 'HTML'             ,'color': 'orange', 'value': 30},
-  			  	{'name': 'SQL'              ,'color': 'orange', 'value': 30},
-  			  	{'name': 'PostgreSQL'       ,'color': 'orange', 'value': 30},
-  			  	{'name': 'Amazon Redshift'  ,'color': 'orange', 'value': 30},
-  			  	{'name': 'Git'              ,'color': 'orange', 'value': 30},
-  			  	{'name': 'Machine Learning' ,'color': 'orange', 'value': 30},
-  			  	{'name': 'Shellscript'      ,'color': 'orange', 'value': 30},
-  			  	{'name': 'Docker'           ,'color': 'orange', 'value': 30},
-  			  	{'name': 'Cassandra'        ,'color': 'orange', 'value': 30},
-  			  	{'name': 'C'                ,'color': 'orange', 'value': 30},
-  			  	{'name': 'C++'              ,'color': 'orange', 'value': 30},
-  			  	{'name': 'Node.js'          ,'color': 'orange', 'value': 30}
-  			]
-		};
-		var color = d3.scale.category10();
-		
-		var width = $(window).width() - 100,
-		    height = 400;
-
-		var svg = d3.select('.skills.container').append('svg')
-		    .attr('width', width)
-		    .attr('height', height);
-
-		var force = d3.layout.force()
-		    .gravity(0.1)
-		    .distance(200)
-		    .charge(-500)
-		    .size([width, height]);
-
-  		force
-  		    .nodes(data.nodes)
-  		    .start();
-
-  		var node = svg.selectAll('.node')
-  		    .data(data.nodes)
-  		  	.enter()
-  		  	.append('g')
-  		    .attr('class', 'node')
-  		    .call(force.drag);
-
-      	node.append('circle')
-      		.attr('class', 'node')
-      		.attr('r', function(d) { return parseInt(d.value); })
-      		.style('fill', function(d) { return d.color; });
-
-  		node.append('text')
-  		  	.attr('dx', 12)
-  		  	.attr('dy', 40)
-  		  	.text(function(d) { return d.name; });
-
-  		force.on('tick', function() {
-        	node.attr('transform', function(d) { 
-				if (d.px + 40 > width) {
-		            d.px = width - 40;
-		            d.x = width -40;
-		        } else if (d.px - 40 < 0) {
-		            d.px = 40;
-		            d.x = 40;
-		        }
-		
-		        if (d.py + 40 > height) {
-		            d.py = height - 40;
-		            d.y = height -40;
-		        } else if (d.py - 40 < 0) {
-		            d.py = 40;
-		            d.y = 40;
-		        }
-        		return 'translate(' + d.x + ',' + d.y + ')'; 
-        	});
-   		});
-
-	</script>
+</script>
 </body>
 </html>
