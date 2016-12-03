@@ -15,7 +15,7 @@ a {
 }
 
 .photo-container {
-	padding-top: 10%;
+	padding-top: 5%;
 }
 
 .header .photo-container img {
@@ -120,16 +120,9 @@ a {
 .separator h1 {
 	display: block;
 	opacity: 0;
-	width: 30%;
 	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	font-size: 70px;
-	text-align: center;
-	top: 50%;
-}
-
-.centered {
+	font-size: 50px;
+	top: 45%;
 	text-align: center;
 }
 
@@ -161,14 +154,13 @@ a {
 	text-align: center;
 }
 
-
-
-
 .timeline {
   list-style: none;
-  padding: 20px 0 20px;
+  padding: 20px 0 1px;
   position: relative;
+  margin-bottom: 40px;
 }
+
 .timeline:before {
   top: 0;
   bottom: 0;
