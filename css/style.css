@@ -86,11 +86,9 @@ a {
 
 .description.container .social-container #github-icon:hover {
 	color: black;
-	font-size: 45px;
 }
 .description.container .social-container #linkedin-icon:hover {
 	color: blue;
-	font-size: 45px;
 }
 
 .container {
