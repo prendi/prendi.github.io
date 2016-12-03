@@ -1,29 +1,20 @@
 <!DOCTYPE HTML>
 <html>
-<!--Start head-->
 <head>
-	<!--Title-->
 	<title>Gonçalo Prendi's Personal Webiste</title>
-	<!--Links-->
 	<link href='node_modules/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css' media='all'>
 	<link href='node_modules/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css' media='all'>
 	<link href='css/style.css' rel='stylesheet' type='text/css' media='all'>
-	<!--Metas-->
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 	<meta name='keywords' content='cv, personal website, gonçalo prendi' />
-	<!--Scripts-->
 	<script type='application/x-javascript'> addEventListener('load', function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<script src='node_modules/jquery/dist/jquery.min.js' type='text/javascript'></script>
 	<script src='node_modules/vissense/dist/vissense.min.js' type='text/javascript'></script>
 	<script src='node_modules/d3/d3.min.js' type='text/javascript'></script>
 	<script src='node_modules/progressbar.js/dist/progressbar.min.js' type='text/javascript'></script>
-	<!--End head-->
 </head>
-<!--Start body-->
 <body>
-
-	<!--Header section place photo and and current position-->
 	<div class='header'>
 		<div class='photo-container'>
 			<img src='images/pcircle.png'>
@@ -33,10 +24,7 @@
 			<h2>Software Engineer</h2>
 		</div>
 	</div>
-
-	<!--Description-->
 	<div class='description container'>
-		<!--short description about myself-->
 		<div class='info'>
 			<div>
 				<span>
@@ -44,7 +32,6 @@
 				</span>
 			</div>
 			<div class='social-container'>
-				<!--social networks with icon-->
 				<ul class='list-unstyled'>
 					<li>
 						<a href='https://github.com/prendi/'>
@@ -237,59 +224,6 @@
 		.attr('dy', function(d) { return parseInt(d.value + 10); })
 		.text(function(d) { return d.name; });
 
-		/*
-		var legend = svg.append("g")
-		  .attr("class", "legend")
-		  .attr("x", width - 65)
-		  .attr("y", 25)
-		  .attr("height", 200)
-		  .attr("width", 200);
-
-		legend.append("rect")
-		  .attr("x", width - 100)
-		  .attr("y", 17)
-		  .attr("width", 10)
-		  .attr("height", 10)
-		  .style("fill", "green");
-		legend.append("text")
-		  .attr("x", width - 80)
-		  .attr("y", 25)
-		  .text("Languages");
-
-		legend.append("rect")
-		  .attr("x", width - 100)
-		  .attr("y", 42)
-		  .attr("width", 10)
-		  .attr("height", 10)
-		  .style("fill", "darkcyan");
-		legend.append("text")
-		  .attr("x", width - 80)
-		  .attr("y", 50)
-		  .text("Databases");
-
-  		legend.append("rect")
-		  .attr("x", width - 100)
-		  .attr("y", 67)
-		  .attr("width", 10)
-		  .attr("height", 10)
-		  .style("fill", "grey");
-		legend.append("text")
-		  .attr("x", width - 80)
-		  .attr("y", 75)
-		  .text("Tools");
-
-  		legend.append("rect")
-		  .attr("x", width - 100)
-		  .attr("y", 92)
-		  .attr("width", 10)
-		  .attr("height", 10)
-		  .style("fill", "#C8D5B9");
-		legend.append("text")
-		  .attr("x", width - 80)
-		  .attr("y", 100)
-		  .text("Concepts");
-
-		*/
 
 		force.on('tick', function() {
 			node.attr('transform', function(d) { 
