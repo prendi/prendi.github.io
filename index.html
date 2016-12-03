@@ -35,10 +35,14 @@
 	</div>
 
 	<!--Description-->
-	<div class='description-container'>
+	<div class='description container'>
 		<!--short description about myself-->
-		<div class='info-container'>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum nunc massa, a auctor eros scelerisque sit amet. Duis ac nisl dapibus, fringilla nisi et, placerat sem. Donec fermentum gravida placerat. Phasellus lobortis feugiat orci, ac blandit dui. Integer id neque nec nunc euismod viverra vel ut est. Donec eget rutrum felis.
+		<div class='info'>
+			<div>
+				<span>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum nunc massa, a auctor eros scelerisque sit amet. Duis ac nisl dapibus, fringilla 	nisi 	et, placerat sem. Donec fermentum gravida placerat. Phasellus lobortis feugiat orci, ac blandit dui. Integer id neque nec nunc euismod viverra vel 	ut est. 	Donec eget rutrum felis.
+				</span>
+			</div>
 			<div class='social-container'>
 				<!--social networks with icon-->
 				<ul class='list-unstyled'>
@@ -143,9 +147,7 @@
 </div>
 
 <div class='contacts container'>
-	<div style="padding-top: 10%; text-align: center;">
-		<h2 style="color: grey">goncalo[dot]prendi25[at]gmail[dot]com</h2>
-	</div>
+	<h2 style="color: grey; text-align: center; font-size: 200%;">goncalo[dot]prendi25<br>[at]gmail[dot]com</h2>
 </div>
 
 <script type='text/javascript'>
@@ -201,7 +203,7 @@
 
 		var color = d3.scale.category10();
 	
-		var width = $('.skills.container div').width(),
+		var width = $(element).width(),
 		height = 400;
 	
 		var svg = d3.select(element).append('svg')
