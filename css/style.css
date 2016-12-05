@@ -140,12 +140,13 @@ a {
   	stroke-opacity: .6;
 }
 
-.contacts.container {
-  height: 200px;
+.skills h2 {
+  text-align: center;
+  color: grey;
 }
 
-.contacts.container h2 {
-  padding: 25px 0px 25px;
+.contacts.container {
+  height: 200px;
 }
 
 .timeline {

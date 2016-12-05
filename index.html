@@ -28,7 +28,7 @@
 		<div class='info'>
 			<div>
 				<span>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum nunc massa, a auctor eros scelerisque sit amet. Duis ac nisl dapibus, fringilla 	nisi 	et, placerat sem. Donec fermentum gravida placerat. Phasellus lobortis feugiat orci, ac blandit dui. Integer id neque nec nunc euismod viverra vel 	ut est. 	Donec eget rutrum felis.
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum nunc massa, a auctor eros scelerisque sit amet. Duis ac nisl dapibus, fringilla nisi et, placerat sem. Donec fermentum gravida placerat. Phasellus lobortis feugiat orci, ac blandit dui. Integer id neque nec nunc euismod viverra vel ut est. Donec eget rutrum felis.
 				</span>
 			</div>
 			<div class='social-container'>
@@ -87,7 +87,7 @@
 						<h4 class="timeline-title">ISCTE-IUL</h4>
 					</div>
 					<div class="timeline-body">
-						<p>Teaching Assistant</p><p>2014-2015</p>
+						<p>Teaching Assistant</p><p>2013-2015</p>
 					</div>
 				</div>
 			</li>
@@ -99,7 +99,7 @@
 						<h4 class="timeline-title">ISCTE-IUL</h4>
 					</div>
 					<div class="timeline-body">
-						<p>Master's Degree in Computer Science</p><p>2014-2015</p>
+						<p>Master's Degree in Computer Science</p><p>2013-2015</p>
 					</div>
 				</div>
 			</li>
@@ -111,7 +111,7 @@
 						<h4 class="timeline-title">ISCTE-IUL</h4>
 					</div>
 					<div class="timeline-body">
-						<p>Bachelor's Degree in Computer Science</p><p>2014-2015</p>
+						<p>Bachelor's Degree in Computer Science</p><p>2010-2013</p>
 					</div>
 				</div>
 			</li>
@@ -123,10 +123,13 @@
 </div>
 <div class='skills container'>
 	<div id='languagesGraph' class="col-md-4">
+	<h2>Languages</h2>
 	</div>
 	<div id='databasesGraph' class="col-md-4">
+	<h2>Databases</h2>
 	</div>
 	<div id='toolsGraph' class="col-md-4">
+	<h2>Tools</h2>
 	</div>
 </div>
 <div class='separator container'>
@@ -134,7 +137,7 @@
 </div>
 
 <div class='contacts container'>
-	<h2 style="color: grey; text-align: center; font-size: 200%;">goncalo[dot]prendi25<br>[at]gmail[dot]com</h2>
+	<a href="cv_en.pdf"><h2 style="color: grey; text-align: center; font-size: 200%;">goncalo[dot]prendi25<br>[at]gmail[dot]com</h2></a>
 </div>
 
 <script type='text/javascript'>
@@ -149,17 +152,17 @@
 <script>
 
 	var languages = {
-		'nodes':[
-			{'name': 'Java'            ,'color': 'green', 'value': 30},
-			{'name': 'SQL'             ,'color': 'green', 'value': 30},
-			{'name': 'Javascript'      ,'color': 'green', 'value': 30},
-			{'name': 'CSS'             ,'color': 'green', 'value': 20},
-			{'name': 'HTML'            ,'color': 'green', 'value': 20},
-			{'name': 'C#'              ,'color': 'green', 'value': 10},
-			{'name': 'Scala'           ,'color': 'green', 'value': 10},
-			{'name': 'Shellscript'     ,'color': 'green', 'value': 10},
-			{'name': 'Node.js'         ,'color': 'green', 'value': 10},
-			{'name': 'C/C++'           ,'color': 'green', 'value': 10}
+		'nodes': [
+			{'name': 'Java'        ,'color': 'green', 'value': 30},
+			{'name': 'SQL'         ,'color': 'green', 'value': 30},
+			{'name': 'Javascript'  ,'color': 'green', 'value': 20},
+			{'name': 'CSS'         ,'color': 'green', 'value': 20},
+			{'name': 'HTML'        ,'color': 'green', 'value': 20},
+			{'name': 'C#'          ,'color': 'green', 'value': 10},
+			{'name': 'Scala'       ,'color': 'green', 'value': 10},
+			{'name': 'Shellscript' ,'color': 'green', 'value': 10},
+			{'name': 'Node.js'     ,'color': 'green', 'value': 10},
+			{'name': 'C/C++'       ,'color': 'green', 'value': 10}
 		]
 	};
 
@@ -173,11 +176,12 @@
 
 	var tools = {
 		'nodes': [
-			{'name': 'Git'             ,'color': 'grey', 'value': 30},
-			{'name': 'IntelliJ'        ,'color': 'grey', 'value': 30},
-			{'name': 'Linux'           ,'color': 'grey', 'value': 20},
-			{'name': 'Eclipse'         ,'color': 'grey', 'value': 10},
-			{'name': 'Docker'          ,'color': 'grey', 'value': 10}
+			{'name': 'Git'      ,'color': 'grey', 'value': 30},
+			{'name': 'IntelliJ' ,'color': 'grey', 'value': 30},
+			{'name': 'Linux'    ,'color': 'grey', 'value': 20},
+			{'name': 'Eclipse'  ,'color': 'grey', 'value': 10},
+			{'name': 'Docker'   ,'color': 'grey', 'value': 10},
+			{'name': 'Maven'    ,'color': 'grey', 'value': 20}
 		]
 	};
 
@@ -191,7 +195,7 @@
 		var color = d3.scale.category10();
 	
 		var width = $(element).width(),
-		height = 400;
+		height = 300;
 	
 		var svg = d3.select(element).append('svg')
 		.attr('width', width)
