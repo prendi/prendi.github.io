@@ -149,6 +149,12 @@ a {
   height: 200px;
 }
 
+.contacts.container h2 {
+  color: grey;
+  font-size: 200%;
+  text-align: center;
+}
+
 .timeline {
   list-style: none;
   padding: 20px 0 20px;
