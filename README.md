@@ -1,8 +1,8 @@
-#README
+# README
 
 This project contains the source code of my personal website and CV. Feel free to use any code, snippets or ideas.
 
-#NOTES
+# NOTES
 
 The CV template and style files are used under [this](https://creativecommons.org/licenses/by-nc-sa/3.0/) license.
  
