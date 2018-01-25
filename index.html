@@ -2,16 +2,16 @@
 <html>
 <head>
 	<title>Gonçalo Prendi's Personal Webiste</title>
-	<link href='node_modules/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css' media='all'>
-	<link href='node_modules/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css' media='all'>
-	<link href='css/style.css' rel='stylesheet' type='text/css' media='all'>
+	<link href='https://raw.githubusercontent.com/prendi/prendi.github.io/master/node_modules/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css' media='all'>
+	<link href='https://raw.githubusercontent.com/prendi/prendi.github.io/master/node_modules/font-awesome/css/font-awesome.min.css' rel='stylesheet' type='text/css' media='all'>
+	<link href='https://raw.githubusercontent.com/prendi/prendi.github.io/master/css/style.css' rel='stylesheet' type='text/css' media='all'>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
 	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
 	<meta name='keywords' content='cv, personal website, gonçalo prendi' />
 	<script type='application/x-javascript'> addEventListener('load', function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<script src='node_modules/jquery/dist/jquery.min.js' type='text/javascript'></script>
-	<script src='node_modules/vissense/dist/vissense.min.js' type='text/javascript'></script>
-	<script src='node_modules/d3/d3.min.js' type='text/javascript'></script>
+	<script src='https://raw.githubusercontent.com/prendi/prendi.github.io/master/node_modules/jquery/dist/jquery.min.js' type='text/javascript'></script>
+	<script src='https://raw.githubusercontent.com/prendi/prendi.github.io/master/node_modules/vissense/dist/vissense.min.js' type='text/javascript'></script>
+	<script src='https://raw.githubusercontent.com/prendi/prendi.github.io/master/node_modules/d3/d3.min.js' type='text/javascript'></script>
 </head>
 <body>
 	<div class='header'>
@@ -195,10 +195,10 @@
 	function loadGraph(element, data) {
 
 		var color = d3.scale.category10();
-	
+
 		var width = $(element).width(),
 		height = 300;
-	
+
 		var svg = d3.select(element).append('svg')
 		.attr('width', width)
 		.attr('height', height);
@@ -232,7 +232,7 @@
 
 
 		force.on('tick', function() {
-			node.attr('transform', function(d) { 
+			node.attr('transform', function(d) {
 				if (d.px + 40 > width) {
 					d.px = width - 40;
 					d.x = width -40;
@@ -248,7 +248,7 @@
 					d.py = 40;
 					d.y = 40;
 				}
-				return 'translate(' + d.x + ',' + d.y + ')'; 
+				return 'translate(' + d.x + ',' + d.y + ')';
 			});
 		});
 	}
